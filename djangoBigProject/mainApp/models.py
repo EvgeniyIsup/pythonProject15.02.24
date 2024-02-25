@@ -12,6 +12,19 @@ class Topping():
         self.id = id
         self.name = name
         self.price = price
+class Cart():
+    _products = []
+    _summ = 0
+    def AddProduct(self,product):
+        self._products.append(product)
+        self._summ = 0
+        for item in self._products:
+            self._summ += item.price
+    def GetProducts(self):
+        return self._products
+    def GetSum(self):
+        return self._summ
+
 
 
 # Create your models here.
