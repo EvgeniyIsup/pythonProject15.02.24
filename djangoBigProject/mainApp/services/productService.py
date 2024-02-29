@@ -6,9 +6,7 @@ products = [Product(1,150.0, "Медвежье ухо", "Пельмени вку
                 Product(2,250.0, "Вятское ухо","Пельмени вкусные", imgs[1]),
                 Product(3,100.0, "Татарские","Пельмени вкусные", imgs[2])]
 def GetAllProducts() -> list:
-    print("Подключились к базе данных достали все товары")
-    return products
+    return Product.objects.all()
 def FindProductById(id:int) -> Product:
-    for product in products:
-        if product.id == id:
-            return product
+    return Product.objects.get(id=id)
+

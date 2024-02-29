@@ -23,5 +23,7 @@ urlpatterns = [
     path('product/<int:product_id>/', Product,name='product'),
     path('add-cart/<int:product_id>/' ,AddInCart, name = 'add-cart'),
     path('get-cart/',GetCart, name = 'cart'),
-    path('send-email/',SendEmail, name ='email_sender')
+    path('send-email/',SendEmail, name ='email_sender'),
+    path('admin/',admin.site.urls)
+
 ]
